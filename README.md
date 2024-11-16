@@ -1,6 +1,6 @@
 # Performance gain using HTTP Connection Pool
 
-In a microservices architecture, the number of server to server connections increases dramatically because the interactions which would traditionally have been an in-memory process in one application now often depends on remote calls to other REST based services over HTTP, meaning it is more important than ever to ensure these remote calls are both fast and efficient.  Let’s look at the lifecycle of a HTTP connection to understand the areas of improvement and possible solution.
+In a microservices architecture, the number of server to server connections decreases dramatically because the interactions which would traditionally have been an in-memory process in one application now often depends on remote calls to other REST based services over HTTP, meaning it is more important than ever to ensure these remote calls are both fast and efficient.  Let’s look at the lifecycle of a HTTP connection to understand the areas of improvement and possible solution.
 
 ## The HTTP Connection Lifecycle
 Usually when talking about a HTTP call, only the orange section (in fig. below) is thought about. A client sends a request to an endpoint, describing what data is being requested, the server processes this request and sends back the data in a response. However it’s clear to see a lot more is happening, most importantly each time the arrows change directions latency will be measurable.
